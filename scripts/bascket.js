@@ -238,7 +238,7 @@ window.addEventListener('click', function(event){
 
 // Слушатель событий для удаления товара из корзины
 cartWrapper.addEventListener('click', function(event) {
-    if (event.target.classList.contains('fa-trash-can')) {
+    if (event.target.classList.contains('fa-trash-cen')) {
         const selectedItem = event.target.closest('.bascket__item');
         const numElement = selectedItem.querySelector('#bascket__product_num'); // Получаем элемент с количеством товаров
         const currentValue = parseInt(numElement.innerText); // Получаем текущее значение
@@ -262,7 +262,7 @@ cartWrapper.addEventListener('click', function(event) {
             itemCount++;
             updateCartCounter(itemCount); // обновить счетчик после добавления товара
         } else if (event.target.id === 'bascket__product_-') {
-            if (currentValue > 1) {
+            if (currentValue > 0) {
                 currentValue--; // Уменьшаем значение, если оно больше 1
                 itemCount--; // Уменьшаем общее количество товаров в корзине
                 updateCartCounter(itemCount); // Обновляем счетчик после уменьшения товара
