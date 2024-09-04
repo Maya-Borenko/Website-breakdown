@@ -478,6 +478,7 @@ section.gallery{
 }
 
 .gallery-list{
+  width: 1200px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -806,15 +807,15 @@ label:not([for^="option"]):not([for^="news"]):not([for^="sales"]) {
 }
 
 .container:hover .card{
-  filter: blur(2px);
-  transform: scale(0.9);
-  opacity: 0.5;
-}
-
-.container .card:hover{
   filter: blur(0);
   transform: scale(1.1);
   opacity: 1;
+}
+
+.container .card:hover{
+  filter: blur(2px);
+  transform: scale(0.9);
+  opacity: 0.5;
 }
 
 
