@@ -49,8 +49,6 @@ function removeFromFavorites(id) {
             const favouritesContainer = document.getElementById('favourites');
             favouritesContainer.innerHTML = ''; // Очищаем контейнер
 
-            // Повторно загружаем данные избранного после удаления товара
-            loadFavoritesDataFromStorage();
         }
     }
 }
