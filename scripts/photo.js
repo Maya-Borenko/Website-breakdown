@@ -8,9 +8,7 @@ function changePhoto(newImage) {
 
 // Функция получения следующего изображения
 function getNextImage() {
-    if (currentImage === totalImages) {
-        currentImage = 1;
-    } else {
+    if (currentImage !== totalImages) {
         currentImage++;
     }
     changePhotoSmoothly(`./img/photo${currentImage}.png`);
@@ -26,9 +24,9 @@ function changePhotoSmoothly(newImage) {
     }, 500); // Задержка в миллисекундах (0.5 секунды)
 }
 
-// Функция для автоматической смены изображений каждые 10 секунд
+// Функция для автоматической смены изображений каждые 3 секунды
 function startImageRotation() {
-    setInterval(getNextImage, 10000);
+    setInterval(getNextImage, 3000);
 }
 
 // Функции изменения фотографий при нажатии на кнопки
